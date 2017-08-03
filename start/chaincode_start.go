@@ -40,7 +40,7 @@ func main() {
 // Init resets all the things
 func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
 	if len(args) != 1 {
-		return nil, errors.New("Incorrect number of arguments. Expecting 1")
+		return nil, errors.New("Incorrect number of arguments. Expecting 1-Changed by adwaitsarnobat")
 	}
 
 	return nil, nil
@@ -48,7 +48,7 @@ func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args [
 
 // Invoke is our entry point to invoke a chaincode function
 func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
-	fmt.Println("invoke is running " + function)
+	fmt.Println("invoke is running , added by adwaitsarnobat" + function)
 
 	// Handle different functions
 	if function == "init" {													//initialize the chaincode state, used as reset
